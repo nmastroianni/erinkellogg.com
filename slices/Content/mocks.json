@@ -1,0 +1,43 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Heading 2",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Apple pie sugar plum icing liquorice soufflé halvah. Jelly-o pie fruitcake biscuit sweet roll. Powder icing gingerbread gummies sugar plum. Powder chocolate bar cake pie pie. Pastry marshmallow lollipop croissant tiramisu lollipop candy canes. Gummies croissant chocolate cake croissant marshmallow fruitcake. Lollipop caramels dessert tart jelly beans.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Dragée jelly beans tart wafer pie lemon drops donut. Bear claw fruitcake cotton candy sesame snaps caramels. Pudding wafer jelly tart cotton candy carrot cake chupa chups liquorice sugar plum. Lemon drops macaroon dessert dessert powder sweet roll. Tiramisu jujubes caramels macaroon liquorice candy tootsie roll. Jelly beans cotton candy marshmallow tart soufflé biscuit. Sweet ice cream topping chupa chups marzipan lemon drops macaroon lollipop. Pudding dragée liquorice dessert ice cream. Candy apple pie lemon drops ice cream cookie jelly beans.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

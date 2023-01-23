@@ -1,0 +1,234 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Hero",
+      "primary": {
+        "headingtext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HeadingText",
+            "labels": [
+              "primary-text",
+              "secondary-text",
+              "accent-text",
+              "neutral-text",
+              "base-text",
+              "info-text",
+              "success-text",
+              "warning-text",
+              "error-text"
+            ],
+            "placeholder": "Enter hero text",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2"
+          }
+        }
+      },
+      "items": {
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonText",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "ButtonLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttoncolor": {
+          "type": "Select",
+          "config": {
+            "label": "ButtonColor",
+            "placeholder": "",
+            "options": [
+              "Primary",
+              "Secondary",
+              "Accent",
+              "Neutral",
+              "Info",
+              "Success",
+              "Warning",
+              "Error"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "imageWithCard",
+      "name": "Image with Card",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Hero",
+      "primary": {
+        "headingtext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HeadingText",
+            "labels": [
+              "primary-text",
+              "secondary-text",
+              "accent-text",
+              "neutral-text",
+              "base-text",
+              "info-text",
+              "success-text",
+              "warning-text",
+              "error-text"
+            ],
+            "placeholder": "Enter hero text",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2"
+          }
+        },
+        "backgroundimage": {
+          "type": "Image",
+          "config": {
+            "label": "BackgroundImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonText",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "ButtonLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttoncolor": {
+          "type": "Select",
+          "config": {
+            "label": "ButtonColor",
+            "placeholder": "",
+            "options": [
+              "Primary",
+              "Secondary",
+              "Accent",
+              "Neutral",
+              "Info",
+              "Success",
+              "Warning",
+              "Error"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "imageHighlightCardOverlay",
+      "name": "Image Highlight Card Overlay",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Hero",
+      "primary": {
+        "headingtext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HeadingText",
+            "labels": [
+              "primary-text",
+              "secondary-text",
+              "accent-text",
+              "neutral-text",
+              "base-text",
+              "info-text",
+              "success-text",
+              "warning-text",
+              "error-text"
+            ],
+            "placeholder": "Enter hero text",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Optionally describe call to action",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagelocation": {
+          "type": "Boolean",
+          "config": {
+            "label": "ImageLocation",
+            "placeholder_false": "Left",
+            "placeholder_true": "Right",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonText",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "ButtonLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttoncolor": {
+          "type": "Select",
+          "config": {
+            "label": "ButtonColor",
+            "placeholder": "",
+            "options": [
+              "Primary",
+              "Secondary",
+              "Accent",
+              "Neutral",
+              "Info",
+              "Success",
+              "Warning",
+              "Error"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

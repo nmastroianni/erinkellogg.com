@@ -1,0 +1,28 @@
+{
+  "_cts": {
+    "homepage": {},
+    "mainmenu": {},
+    "page": {}
+  },
+  "slices": {
+    "Content": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Hero": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "imageHighlightCardOverlay": {
+        "primary": {}
+      }
+    },
+    "Divider": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

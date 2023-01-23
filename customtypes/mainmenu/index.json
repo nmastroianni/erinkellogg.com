@@ -1,0 +1,65 @@
+{
+  "id": "mainmenu",
+  "label": "MainMenu",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "fields": {
+            "linktext": {
+              "type": "Text",
+              "config": {
+                "label": "LinkText",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "desktopbuttontext": {
+        "type": "Text",
+        "config": {
+          "label": "DesktopButtonText",
+          "placeholder": ""
+        }
+      },
+      "desktopbuttonlink": {
+        "type": "Link",
+        "config": {
+          "label": "DesktopButtonLink",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "desktopbuttoncolor": {
+        "type": "Select",
+        "config": {
+          "label": "DesktopButtonColor",
+          "placeholder": "",
+          "options": [
+            "Primary",
+            "Secondary",
+            "Accent",
+            "Neutral",
+            "Info",
+            "Success",
+            "Warning",
+            "Error"
+          ]
+        }
+      }
+    }
+  }
+}

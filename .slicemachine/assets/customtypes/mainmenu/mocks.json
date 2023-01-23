@@ -1,0 +1,47 @@
+{
+  "links": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "linktext",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "advice",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "desktopbuttontext": {
+    "__TYPE__": "FieldContent",
+    "value": "tone",
+    "type": "Text"
+  },
+  "desktopbuttonlink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://google.com"
+    }
+  },
+  "desktopbuttoncolor": {
+    "__TYPE__": "FieldContent",
+    "value": "Neutral",
+    "type": "Select"
+  }
+}
