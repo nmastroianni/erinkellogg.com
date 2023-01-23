@@ -48,16 +48,20 @@ const Hero = ({ slice }) => {
     return (
       <section>
         <div
-          className="hero min-h-screen"
-          style={{
-            backgroundImage: `url(${slice.primary.backgroundimage.url})`,
-          }}
+          className="hero relative"
+          // style={{
+          //   backgroundImage: `url(${slice.primary.backgroundimage.url})`,
+          // }}
         >
+          <PrismicNextImage
+            field={slice.primary.backgroundimage}
+            className={`inset-0 h-[500px] object-cover`}
+          />
           {/* <div className="hero-overlay"></div> */}
           <div
             className="hero-content max-w-[1280px] rounded-lg px-6 text-center text-neutral md:px-12 xl:px-32"
             style={{
-              background: 'hsla(0, 0%, 100%, 0.65)',
+              background: 'hsla(0, 0%, 100%, 0.7)',
               backdropFilter: 'blur(30px)',
             }}
           >
@@ -113,7 +117,9 @@ const Hero = ({ slice }) => {
                     components={heroTemplates}
                   />
                   {slice.primary.description && (
-                    <PrismicRichText field={slice.primary.description} />
+                    <div className="prose text-left md:prose-lg lg:prose-xl xl:prose-2xl">
+                      <PrismicRichText field={slice.primary.description} />
+                    </div>
                   )}
                   {slice.items.length > 0 && (
                     <div
@@ -122,7 +128,7 @@ const Hero = ({ slice }) => {
                       }`}
                     >
                       {slice.items.length > 0 && (
-                        <div className="flex justify-center gap-x-4">
+                        <div className="mt-4 flex justify-center gap-x-4 md:mt-6 lg:mt-8 xl:mt-10">
                           {slice?.items?.map((item, i) => {
                             return (
                               <PrismicButtonLink
