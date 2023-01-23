@@ -48,23 +48,20 @@ const Hero = ({ slice }) => {
     return (
       <section>
         <div
-          className="relative overflow-hidden bg-cover bg-no-repeat"
+          className="hero min-h-screen"
           style={{
-            backgroundPosition: '50%',
             backgroundImage: `url(${slice.primary.backgroundimage.url})`,
-            height: '500px',
           }}
-        ></div>
-        <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
-          <div className="text-center text-black">
-            <div
-              className="z-10 block rounded-lg px-6 py-12 md:py-16 md:px-12"
-              style={{
-                marginTop: '-170px',
-                background: 'hsla(0, 0%, 100%, 0.7)',
-                backdropFilter: 'blur(30px)',
-              }}
-            >
+        >
+          {/* <div className="hero-overlay"></div> */}
+          <div
+            className="hero-content max-w-[1280px] rounded-lg px-6 text-center text-neutral md:px-12 xl:px-32"
+            style={{
+              background: 'hsla(0, 0%, 100%, 0.65)',
+              backdropFilter: 'blur(30px)',
+            }}
+          >
+            <div className="">
               <PrismicRichText
                 field={slice.primary.headingtext}
                 components={heroTemplates}
