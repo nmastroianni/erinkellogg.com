@@ -6,6 +6,56 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * Links field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    links: prismicT.GroupField<Simplify<FooterDocumentDataLinksItem>>;
+}
+/**
+ * Item in Footer → Links
+ *
+ */
+export interface FooterDocumentDataLinksItem {
+    /**
+     * LinkText field in *Footer → Links*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[].linktext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    linktext: prismicT.KeyTextField;
+    /**
+     * Link field in *Footer → Links*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
@@ -143,6 +193,17 @@ export type MainmenuDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Page documents */
 interface PageDocumentData {
     /**
+     * Title field in *Page*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
      * Hide Page Title? field in *Page*
      *
      * - **Field Type**: Boolean
@@ -213,8 +274,8 @@ type PageDocumentDataSlicesSlice = ContentSlice | DividerSlice | HeroSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | MainmenuDocument | PageDocument;
+export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | MainmenuDocument | PageDocument;
 /**
  * Primary content in Content → Primary
  *
@@ -520,6 +581,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataLinksItem, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice };
+        export type { FooterDocumentData, FooterDocumentDataLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataLinksItem, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice };
     }
 }

@@ -1,4 +1,5 @@
 import { PrismicLink } from '@prismicio/react'
+import Link from 'next/link'
 import Headroom from 'react-headroom'
 import PrismicButtonLink from '../PrismicButtonLink'
 
@@ -23,11 +24,11 @@ export const Navbar = ({ data, serif }) => {
             </svg>
           </label>
         </div>
-        <div
+        <h1
           className={`mx-2 px-2 ${serif.className} tansform absolute left-1/2 -translate-x-1/2 text-xl font-bold lg:relative lg:left-0 lg:translate-x-0 lg:text-2xl `}
         >
-          Erin Kellogg
-        </div>
+          <Link href="/">Erin Kellogg</Link>
+        </h1>
         <div className="hidden lg:block">
           {data.links.length > 0 && (
             <ul className="menu rounded-box menu-horizontal">

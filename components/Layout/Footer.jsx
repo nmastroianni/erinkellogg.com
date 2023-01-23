@@ -1,5 +1,6 @@
+import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
-export const Footer = () => {
+export const Footer = ({ data: { links } }) => {
   React.useEffect(() => {
     const year = new Date().getFullYear()
     document.querySelector('#copyright-year').innerHTML = year
@@ -16,17 +17,17 @@ export const Footer = () => {
         </p>
       </div>
       <div className="gap-4 justify-self-center md:place-self-center md:justify-self-end">
-        <ul className="menu menu-vertical md:menu-horizontal">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item 2</a>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        {links?.length > 0 && (
+          <ul className="menu menu-vertical md:menu-horizontal">
+            {links.map((link, i) => {
+              return (
+                <li key={link.link.id + i}>
+                  <PrismicLink field={link.link}>{link.linktext}</PrismicLink>
+                </li>
+              )
+            })}
+          </ul>
+        )}
       </div>
     </footer>
   )

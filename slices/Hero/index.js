@@ -19,6 +19,13 @@ const Hero = ({ slice }) => {
         </Heading>
       )
     },
+    heading2: ({ children }) => {
+      return (
+        <Heading as="h2" size="6xl" className={`hero-h1 mb-4 md:mb-6`}>
+          {children}
+        </Heading>
+      )
+    },
   }
   if (slice.variation === 'default') {
     return (

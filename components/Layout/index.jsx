@@ -7,14 +7,14 @@ const roboto_flex = Roboto_Flex({ subsets: ['latin'] })
 import { PrismicLink } from '@prismicio/react'
 import { Navbar } from './Navbar'
 
-const Layout = ({ children, navigation }) => {
+const Layout = ({ children, footer, navigation }) => {
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className={`drawer-content flex flex-col ${roboto_flex.className}`}>
         <Navbar serif={roboto_serif} data={navigation.data} />
         <main>{children}</main>
-        <Footer />
+        <Footer {...footer} />
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>

@@ -2,7 +2,8 @@
   "_cts": {
     "homepage": {},
     "mainmenu": {},
-    "page": {}
+    "page": {},
+    "footer": {}
   },
   "slices": {
     "Content": {
