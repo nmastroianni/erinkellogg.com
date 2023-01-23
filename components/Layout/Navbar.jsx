@@ -40,7 +40,7 @@ export const Navbar = ({ data, serif }) => {
             className="btn-ghost btn text-xl normal-case focus:outline-none focus:ring-4 focus:ring-secondary"
           >
             <h1
-              className={`mx-2 px-2 ${serif.className} tansform absolute left-1/2 -translate-x-1/2 text-lg font-bold lg:relative lg:left-0 lg:translate-x-0 lg:text-2xl `}
+              className={`mx-2 px-2 ${serif.className}  text-lg font-bold lg:relative lg:text-2xl `}
             >
               Erin Kellogg
             </h1>
