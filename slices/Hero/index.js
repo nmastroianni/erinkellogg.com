@@ -54,6 +54,7 @@ const Hero = ({ slice }) => {
           // }}
         >
           <PrismicNextImage
+            priority={true}
             field={slice.primary.backgroundimage}
             className={`inset-0 h-[500px] object-cover`}
           />
@@ -147,6 +148,7 @@ const Hero = ({ slice }) => {
                 <PrismicNextImage
                   field={slice.primary.image}
                   className="w-full rounded-lg shadow-lg"
+                  priority={true}
                 />
               </div>
             </div>

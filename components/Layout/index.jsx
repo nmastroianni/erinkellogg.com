@@ -6,6 +6,7 @@ const roboto_flex = Roboto_Flex({ subsets: ['latin'] })
 
 import { PrismicLink } from '@prismicio/react'
 import { Navbar } from './Navbar'
+import Consent from './Consent'
 
 const Layout = ({ children, footer, navigation }) => {
   return (
@@ -20,6 +21,7 @@ const Layout = ({ children, footer, navigation }) => {
         <Navbar serif={roboto_serif} data={navigation.data} />
         <main id="main-content">{children}</main>
         <Footer {...footer} />
+        <Consent />
       </div>
     </div>
   )

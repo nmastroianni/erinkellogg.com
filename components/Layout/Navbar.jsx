@@ -6,7 +6,6 @@ import { components } from '../../slices'
 import { SliceZone } from '@prismicio/react'
 
 export const Navbar = ({ data, serif }) => {
-  console.log('navbar', data)
   const { slices } = data
   return (
     <Headroom>
