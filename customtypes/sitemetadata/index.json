@@ -1,0 +1,41 @@
+{
+  "id": "sitemetadata",
+  "label": "SiteMetadata",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "sitetitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "SiteTitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "sitemetadescription": {
+        "type": "Text",
+        "config": {
+          "label": "SiteMetaDescription",
+          "placeholder": ""
+        }
+      },
+      "sitemetaimage": {
+        "type": "Image",
+        "config": {
+          "label": "SiteMetaImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sitecanonicalurl": {
+        "type": "Text",
+        "config": {
+          "label": "SiteCanonicalUrl",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

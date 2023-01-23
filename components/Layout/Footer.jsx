@@ -6,7 +6,7 @@ export const Footer = ({ data: { links } }) => {
     document.querySelector('#copyright-year').innerHTML = year
   }, [])
   return (
-    <footer className="footer mt-auto bg-neutral p-4 text-neutral-content">
+    <footer className="footer mt-auto bg-neutral p-4 text-primary">
       <div className="self-center justify-self-center md:justify-self-start">
         <p>
           Copyright ©{' '}
@@ -21,8 +21,13 @@ export const Footer = ({ data: { links } }) => {
           <ul className="menu menu-vertical md:menu-horizontal">
             {links.map((link, i) => {
               return (
-                <li key={link.link.id + i}>
-                  <PrismicLink field={link.link}>{link.linktext}</PrismicLink>
+                <li key={link.link.id + i} className="rounded-lg">
+                  <PrismicLink
+                    field={link.link}
+                    className="focus:outline-none focus:ring-4 focus:ring-primary"
+                  >
+                    {link.linktext}
+                  </PrismicLink>
                 </li>
               )
             })}

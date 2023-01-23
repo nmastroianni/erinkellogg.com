@@ -9,26 +9,17 @@ import { Navbar } from './Navbar'
 
 const Layout = ({ children, footer, navigation }) => {
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className={`drawer-content flex flex-col ${roboto_flex.className}`}>
+    <div className="relative">
+      <a
+        href="#main-content"
+        className=" btn-warning btn fixed top-4 -left-[310px] z-10 transform opacity-50 focus:translate-x-[360px] focus:opacity-100 active:translate-x-[260px]"
+      >
+        Press Enter to Skip to Main Content
+      </a>
+      <div className={`flex min-h-screen flex-col ${roboto_flex.className}`}>
         <Navbar serif={roboto_serif} data={navigation.data} />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer {...footer} />
-      </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        {navigation?.data?.links?.length > 0 && (
-          <ul className="menu w-80 bg-base-100 p-4">
-            {navigation?.data?.links?.map((item, i) => {
-              return (
-                <li key={item.link.id + i}>
-                  <PrismicLink field={item.link}>{item.linktext}</PrismicLink>
-                </li>
-              )
-            })}
-          </ul>
-        )}
       </div>
     </div>
   )

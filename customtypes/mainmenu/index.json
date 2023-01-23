@@ -5,29 +5,6 @@
   "status": true,
   "json": {
     "Main": {
-      "links": {
-        "type": "Group",
-        "config": {
-          "label": "Links",
-          "fields": {
-            "linktext": {
-              "type": "Text",
-              "config": {
-                "label": "LinkText",
-                "placeholder": ""
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
-        }
-      },
       "desktopbuttontext": {
         "type": "Text",
         "config": {
@@ -58,6 +35,17 @@
             "Warning",
             "Error"
           ]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "menu_item": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }

@@ -3,15 +3,18 @@
 import Content from './Content';
 import Divider from './Divider';
 import Hero from './Hero';
+import MenuItem from './MenuItem';
 
 export {
 	Content,
 	Divider,
 	Hero,
+	MenuItem,
 };
 
 export const components = {
 	content: Content,
 	divider: Divider,
 	hero: Hero,
+	menu_item: MenuItem,
 };

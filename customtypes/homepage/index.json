@@ -5,6 +5,15 @@
   "status": true,
   "json": {
     "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

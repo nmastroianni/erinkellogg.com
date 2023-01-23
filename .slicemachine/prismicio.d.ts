@@ -59,6 +59,17 @@ export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocum
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
+     * Title field in *Homepage*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
      * Slice Zone field in *Homepage*
      *
      * - **Field Type**: Slice Zone
@@ -110,17 +121,6 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for MainMenu documents */
 interface MainmenuDocumentData {
     /**
-     * Links field in *MainMenu*
-     *
-     * - **Field Type**: Group
-     * - **Placeholder**: *None*
-     * - **API ID Path**: mainmenu.links[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
-     *
-     */
-    links: prismicT.GroupField<Simplify<MainmenuDocumentDataLinksItem>>;
-    /**
      * DesktopButtonText field in *MainMenu*
      *
      * - **Field Type**: Text
@@ -153,33 +153,23 @@ interface MainmenuDocumentData {
      *
      */
     desktopbuttoncolor: prismicT.SelectField<"Primary" | "Secondary" | "Accent" | "Neutral" | "Info" | "Success" | "Warning" | "Error">;
+    /**
+     * Slice Zone field in *MainMenu*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: mainmenu.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<MainmenuDocumentDataSlicesSlice>;
 }
 /**
- * Item in MainMenu → Links
+ * Slice for *MainMenu → Slice Zone*
  *
  */
-export interface MainmenuDocumentDataLinksItem {
-    /**
-     * LinkText field in *MainMenu → Links*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: mainmenu.links[].linktext
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    linktext: prismicT.KeyTextField;
-    /**
-     * Link field in *MainMenu → Links*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: mainmenu.links[].link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    link: prismicT.LinkField;
-}
+type MainmenuDocumentDataSlicesSlice = MenuItemSlice;
 /**
  * MainMenu document from Prismic
  *
@@ -275,7 +265,64 @@ type PageDocumentDataSlicesSlice = ContentSlice | DividerSlice | HeroSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | MainmenuDocument | PageDocument;
+/** Content for SiteMetadata documents */
+interface SitemetadataDocumentData {
+    /**
+     * SiteTitle field in *SiteMetadata*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sitemetadata.sitetitle
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    sitetitle: prismicT.TitleField;
+    /**
+     * SiteMetaDescription field in *SiteMetadata*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sitemetadata.sitemetadescription
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sitemetadescription: prismicT.KeyTextField;
+    /**
+     * SiteMetaImage field in *SiteMetadata*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sitemetadata.sitemetaimage
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    sitemetaimage: prismicT.ImageField<never>;
+    /**
+     * SiteCanonicalUrl field in *SiteMetadata*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sitemetadata.sitecanonicalurl
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sitecanonicalurl: prismicT.KeyTextField;
+}
+/**
+ * SiteMetadata document from Prismic
+ *
+ * - **API ID**: `sitemetadata`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SitemetadataDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SitemetadataDocumentData>, "sitemetadata", Lang>;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | MainmenuDocument | PageDocument | SitemetadataDocument;
 /**
  * Primary content in Content → Primary
  *
@@ -576,11 +623,60 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceImageWithCard | HeroSliceI
  *
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
+/**
+ * Primary content in MenuItem → Primary
+ *
+ */
+interface MenuItemSliceDefaultPrimary {
+    /**
+     * LinkText field in *MenuItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu_item.primary.linktext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    linktext: prismicT.KeyTextField;
+    /**
+     * Link field in *MenuItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu_item.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for MenuItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `MenuItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type MenuItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<MenuItemSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *MenuItem*
+ *
+ */
+type MenuItemSliceVariation = MenuItemSliceDefault;
+/**
+ * MenuItem Shared Slice
+ *
+ * - **API ID**: `menu_item`
+ * - **Description**: `MenuItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type MenuItemSlice = prismicT.SharedSlice<"menu_item", MenuItemSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataLinksItem, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice };
+        export type { FooterDocumentData, FooterDocumentDataLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataSlicesSlice, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SitemetadataDocumentData, SitemetadataDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice, MenuItemSliceDefaultPrimary, MenuItemSliceDefault, MenuItemSliceVariation, MenuItemSlice };
     }
 }

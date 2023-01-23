@@ -3,7 +3,8 @@
     "homepage": {},
     "mainmenu": {},
     "page": {},
-    "footer": {}
+    "footer": {},
+    "sitemetadata": {}
   },
   "slices": {
     "Content": {
@@ -21,6 +22,11 @@
       }
     },
     "Divider": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "MenuItem": {
       "default": {
         "primary": {}
       }

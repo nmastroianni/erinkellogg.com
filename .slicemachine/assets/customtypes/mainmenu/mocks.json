@@ -1,35 +1,7 @@
 {
-  "links": {
-    "__TYPE__": "GroupContentType",
-    "value": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "linktext",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "advice",
-              "type": "Text"
-            }
-          ],
-          [
-            "link",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  },
   "desktopbuttontext": {
     "__TYPE__": "FieldContent",
-    "value": "tone",
+    "value": "chosen",
     "type": "Text"
   },
   "desktopbuttonlink": {
@@ -41,7 +13,40 @@
   },
   "desktopbuttoncolor": {
     "__TYPE__": "FieldContent",
-    "value": "Neutral",
+    "value": "Info",
     "type": "Select"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "menu_item$7f9841f4-3175-4b58-93a7-30e4a4b6f527",
+        "name": "menu_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "linktext": {
+              "__TYPE__": "FieldContent",
+              "value": "orbit",
+              "type": "Text"
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }
