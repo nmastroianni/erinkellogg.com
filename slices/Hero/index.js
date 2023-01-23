@@ -58,7 +58,7 @@ const Hero = ({ slice }) => {
         <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
           <div className="text-center text-black">
             <div
-              className="block rounded-lg px-6 py-12 md:py-16 md:px-12"
+              className="z-10 block rounded-lg px-6 py-12 md:py-16 md:px-12"
               style={{
                 marginTop: '-170px',
                 background: 'hsla(0, 0%, 100%, 0.7)',
