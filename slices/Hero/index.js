@@ -59,13 +59,7 @@ const Hero = ({ slice }) => {
             className={`inset-0 h-[500px] object-cover`}
           />
           {/* <div className="hero-overlay"></div> */}
-          <div
-            className="hero-content max-w-[1280px] rounded-lg px-6 text-center text-neutral md:px-12 xl:px-32"
-            style={{
-              background: 'hsla(0, 0%, 100%, 0.7)',
-              backdropFilter: 'blur(30px)',
-            }}
-          >
+          <div className="hero-content max-w-[1280px] rounded-lg bg-white bg-opacity-70 px-6 text-center text-neutral backdrop-blur-md md:px-12 xl:px-32">
             <div className="">
               <PrismicRichText
                 field={slice.primary.headingtext}
@@ -105,13 +99,9 @@ const Hero = ({ slice }) => {
                 }`}
               >
                 <div
-                  className={`block rounded-lg px-6 py-12 shadow-lg md:px-12 lg:-mr-14 ${
+                  className={`block rounded-lg bg-white bg-opacity-50 px-6 py-12 shadow-lg backdrop-blur-md md:px-12 lg:-mr-14 ${
                     slice.primary.imagelocation ? `-ml-14` : ``
                   }`}
-                  style={{
-                    background: 'hsla(0, 0%, 100%, 0.55)',
-                    backdropFilter: 'blur(30px)',
-                  }}
                 >
                   <PrismicRichText
                     field={slice.primary.headingtext}
