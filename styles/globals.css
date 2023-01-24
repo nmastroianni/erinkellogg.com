@@ -14,7 +14,7 @@ p:has(.center-align) {
 }
 
 .primary-text {
-  @apply text-primary;
+  @apply text-[#0696a9];
 }
 
 .secondary-text {
