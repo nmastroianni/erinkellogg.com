@@ -23,7 +23,6 @@ const Consent = () => {
       ad_storage: 'granted',
       analytics_storage: 'granted',
     })
-    console.log('accepting cookies')
   }
   const denyCookie = () => {
     setConsent(true)
@@ -31,11 +30,9 @@ const Consent = () => {
       maxAge: 60 * 60 * 24 * 14,
       sameSite: true,
     })
-    console.log('denying cookies for 2 weeks')
   }
   const closeP = () => {
     setConsent(true)
-    console.log('closing')
   }
   if (consent === true) {
     return null

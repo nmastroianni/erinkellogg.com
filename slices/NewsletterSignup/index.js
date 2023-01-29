@@ -12,6 +12,47 @@ import Heading from '@/components/Heading'
 const NewsletterSignup = ({ slice }) => {
   const [isDisabled, setIsDisabled] = React.useState(false)
   const [success, setSuccess] = React.useState(null)
+  const [formInteraction, setFormInteraction] = React.useState(false)
+
+  const handleFocus = () => {
+    !formInteraction && setFormInteraction(true)
+  }
+
+  React.useEffect(() => {
+    if (formInteraction) {
+      const recaptchaScript = document.createElement('script')
+      recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=6LeHxDYkAAAAAPUbSr8asoDuwicuqAa2t8i3s1Md`
+      recaptchaScript.async = true
+      recaptchaScript.defer = true
+      document.head.appendChild(recaptchaScript)
+      return () => {
+        // Get all script tags: returns HTMLcollection
+        const scripts = document.getElementsByTagName('script')
+        // Loop through the HTMLcollection (array-like but not array)
+        for (var i = 0; i < scripts.length; i++) {
+          // find script whose src value includes "recaptcha/releases"
+          // this script is added when main recaptcha script is loaded
+
+          if (
+            scripts.item(i).attributes.getNamedItem('src') &&
+            scripts
+              .item(i)
+              .attributes.getNamedItem('src')
+              .value.includes('recaptcha/releases')
+          ) {
+            document.head.removeChild(scripts.item(i)) // remove script from head
+          }
+        }
+        document.head.removeChild(recaptchaScript) // remove main recaptcha script from head
+        // remove the recaptcha badge from the bottom right corner
+        let badge = document.querySelector('.grecaptcha-badge')
+        if (badge) {
+          badge.parentElement.remove()
+        }
+      }
+    }
+  }, [formInteraction])
+
   const {
     register,
     handleSubmit,
@@ -188,6 +229,7 @@ const NewsletterSignup = ({ slice }) => {
                   'Your first name is required. I would like to be able to say hi!',
               })}
               className={`max-w-s input-bordered ${inputColor} input w-full`}
+              onFocus={handleFocus}
             />
           </label>
           <label htmlFor={`email_${id}`}>
