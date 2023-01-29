@@ -15,6 +15,7 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
       const recaptchaScript = document.createElement('script')
       recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=6LeHxDYkAAAAAPUbSr8asoDuwicuqAa2t8i3s1Md`
       recaptchaScript.async = true
+      recaptchaScript.defer = true
       document.head.appendChild(recaptchaScript)
       return () => {
         // Get all script tags: returns HTMLcollection
