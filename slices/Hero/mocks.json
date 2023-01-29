@@ -51,79 +51,6 @@
   },
   {
     "__TYPE__": "SharedSliceContent",
-    "variation": "imageWithCard",
-    "primary": {
-      "headingtext": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading1",
-            "content": {
-              "text": "Shirt"
-            }
-          }
-        ]
-      },
-      "backgroundimage": {
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-          "width": 8640,
-          "height": 8640
-        },
-        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-        "width": 8640,
-        "height": 8640,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "credits": null,
-        "alt": null,
-        "__TYPE__": "ImageContent",
-        "thumbnails": {}
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "buttontext",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "cowboy",
-              "type": "Text"
-            }
-          ],
-          [
-            "buttonlink",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
-              }
-            }
-          ],
-          [
-            "buttoncolor",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "Primary",
-              "type": "Select"
-            }
-          ]
-        ]
-      }
-    ]
-  },
-  {
-    "__TYPE__": "SharedSliceContent",
     "variation": "imageHighlightCardOverlay",
     "primary": {
       "headingtext": {
@@ -204,6 +131,81 @@
               "__TYPE__": "FieldContent",
               "value": "Neutral",
               "type": "Select"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "imageWithCard",
+    "primary": {
+      "headingtext": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Hero Image with Card",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "backgroundimage": {
+        "origin": {
+          "id": "KMn4VEeEPR8",
+          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxiZWFjaHxlbnwwfHx8fDE2NzQ5OTA1ODU&ixlib=rb-4.0.3&q=80",
+          "width": 4621,
+          "height": 3072
+        },
+        "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxiZWFjaHxlbnwwfHx8fDE2NzQ5OTA1ODU&ixlib=rb-4.0.3&q=80",
+        "width": 4621,
+        "height": 3072,
+        "edit": {
+          "background": "transparent",
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "buttontext",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Text",
+              "value": "Secondary Button"
+            }
+          ],
+          [
+            "buttoncolor",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Select",
+              "value": "Secondary"
+            }
+          ],
+          [
+            "buttonlink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://www.erinkellogg.com"
+              }
             }
           ]
         ]

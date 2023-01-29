@@ -36,7 +36,7 @@ const Hero = ({ index, slice }) => {
         {slice.items.length > 0 && (
           <div className="flex justify-center gap-x-4">
             {slice?.items?.map((item, i) => {
-              return <PrismicButtonLink key={item.id + i} {...item} />
+              return <PrismicButtonLink key={slice.id + i} {...item} />
             })}
           </div>
         )}
@@ -63,18 +63,9 @@ const Hero = ({ index, slice }) => {
               />
               {slice.items.length > 0 && (
                 <div className="flex justify-center gap-x-4">
-                  {slice.items.length > 0 && (
-                    <div className="flex justify-center gap-x-4">
-                      {slice?.items?.map((item, i) => {
-                        return (
-                          <PrismicButtonLink
-                            key={item.buttonlink.id + i}
-                            {...item}
-                          />
-                        )
-                      })}
-                    </div>
-                  )}
+                  {slice?.items?.map((item, i) => {
+                    return <PrismicButtonLink key={slice.id + i} {...item} />
+                  })}
                 </div>
               )}
             </div>
@@ -118,10 +109,7 @@ const Hero = ({ index, slice }) => {
                         <div className="mt-4 flex justify-center gap-x-4 md:mt-6 lg:mt-8 xl:mt-10">
                           {slice?.items?.map((item, i) => {
                             return (
-                              <PrismicButtonLink
-                                key={item.buttonlink.id + i}
-                                {...item}
-                              />
+                              <PrismicButtonLink key={slice.id + i} {...item} />
                             )
                           })}
                         </div>

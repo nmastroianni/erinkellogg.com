@@ -19,6 +19,13 @@
       },
       "imageHighlightCardOverlay": {
         "primary": {}
+      },
+      "imageWithCard": {
+        "items": {
+          "buttonlink": {
+            "content": "https://www.erinkellogg.com"
+          }
+        }
       }
     },
     "Divider": {
