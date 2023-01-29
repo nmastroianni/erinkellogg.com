@@ -14,7 +14,7 @@ module.exports = {
         erin: {
           primary: '#67e8f9',
 
-          secondary: '#FD7C6E',
+          secondary: '#FC3B26',
 
           accent: '#4C7BA9',
 

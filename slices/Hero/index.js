@@ -1,16 +1,15 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
-import { Roboto_Serif } from '@next/font/google'
-const serif = Roboto_Serif({ subsets: ['latin'] })
 import PrismicButtonLink from '@/components/PrismicButtonLink'
 import Heading from '@/components/Heading'
+
 /**
  * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeroSlice>} HeroProps
  * @param { HeroProps }
  */
-const Hero = ({ slice }) => {
+const Hero = ({ index, slice }) => {
   const heroTemplates = {
     heading1: ({ children }) => {
       return (
@@ -48,19 +47,16 @@ const Hero = ({ slice }) => {
     return (
       <section>
         <div
-          className="hero relative"
-          // style={{
-          //   backgroundImage: `url(${slice.primary.backgroundimage.url})`,
-          // }}
-        >
-          <PrismicNextImage
-            priority={true}
-            field={slice.primary.backgroundimage}
-            className={`inset-0 h-[500px] object-cover`}
-          />
-          {/* <div className="hero-overlay"></div> */}
-          <div className="hero-content max-w-[1280px] rounded-lg bg-white bg-opacity-70 px-6 text-center text-neutral backdrop-blur-md md:px-12 xl:px-32">
-            <div className="">
+          className="relative overflow-hidden bg-cover bg-no-repeat"
+          style={{
+            backgroundPosition: '50%',
+            backgroundImage: `url(${slice.primary.backgroundimage.url})`,
+            height: '500px',
+          }}
+        ></div>
+        <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
+          <div className="text-center text-black">
+            <div className="-mt-[180px] block rounded-lg bg-white bg-opacity-70 px-6 py-12 backdrop-blur-md md:py-16 md:px-12">
               <PrismicRichText
                 field={slice.primary.headingtext}
                 components={heroTemplates}
@@ -99,8 +95,8 @@ const Hero = ({ slice }) => {
                 }`}
               >
                 <div
-                  className={`block rounded-lg bg-white bg-opacity-50 px-6 py-12 shadow-lg backdrop-blur-md md:px-12 lg:-mr-14 ${
-                    slice.primary.imagelocation ? `-ml-14` : ``
+                  className={`block rounded-lg bg-white bg-opacity-50 px-6 py-12 shadow-lg backdrop-blur-md md:px-12 lg:-mr-8 ${
+                    slice.primary.imagelocation ? `-ml-8` : ``
                   }`}
                 >
                   <PrismicRichText
@@ -138,7 +134,7 @@ const Hero = ({ slice }) => {
                 <PrismicNextImage
                   field={slice.primary.image}
                   className="w-full rounded-lg shadow-lg"
-                  priority={true}
+                  priority={index === 0 ? true : false}
                 />
               </div>
             </div>

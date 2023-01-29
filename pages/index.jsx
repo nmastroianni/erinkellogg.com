@@ -15,33 +15,33 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
         <link
           rel="canonical"
           href={
-            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com`
+            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com/`
           }
         />
-        {page.data.metadescription ||
-          (siteMetadata.data.sitemetadescription && (
+        {page.data.metadescription ? (
+          <meta name="description" content={page.data.metadescription} />
+        ) : (
+          siteMetadata.data.sitemetadescription && (
             <meta
               name="description"
-              content={
-                page.data.metadescription ||
-                siteMetadata.data.sitemetadescription
-              }
+              content={siteMetadata.data.sitemetadescription}
             />
-          ))}
-        {page.data.metadescription ||
-          (siteMetadata.data.sitemetadescription && (
+          )
+        )}
+        {page.data.metadescription ? (
+          <meta property="og:description" content={page.data.metadescription} />
+        ) : (
+          siteMetadata.data.sitemetadescription && (
             <meta
               property="og:description"
-              content={
-                page.data.metadescription ||
-                siteMetadata.data.sitemetadescription
-              }
+              content={siteMetadata.data.sitemetadescription}
             />
-          ))}
+          )
+        )}
         <meta
           property="og:url"
           content={
-            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com`
+            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com/`
           }
         />
         <meta property="og:type" content="website" />
@@ -69,7 +69,11 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
           ))}
       </Head>
       <div className="grid grid-cols-1 gap-y-4 md:gap-y-0">
-        <SliceZone slices={page.data.slices} components={components} />
+        <SliceZone
+          slices={page.data.slices}
+          components={components}
+          myProp="foo"
+        />
       </div>
     </Layout>
   )

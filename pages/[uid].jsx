@@ -16,7 +16,7 @@ const Page = ({ footer, navigation, page, siteMetadata }) => {
         <link
           rel="canonical"
           href={
-            page.data.canonicalurl || `https://www.erinkellogg.com${page.url}`
+            page.data.canonicalurl || `https://www.erinkellogg.com${page.url}/`
           }
         />
         {page.data.metadescription ||
@@ -42,7 +42,7 @@ const Page = ({ footer, navigation, page, siteMetadata }) => {
         <meta
           property="og:url"
           content={
-            page.data.canonicalurl || `https://www.erinkellogg.com/${page.url}`
+            page.data.canonicalurl || `https://www.erinkellogg.com/${page.url}/`
           }
         />
         <meta property="og:type" content="website" />
