@@ -28,7 +28,7 @@ const Hero = ({ index, slice }) => {
   }
   if (slice.variation === 'default') {
     return (
-      <section className="bg-gradient-to-b from-primary via-base-100 to-transparent py-24 px-6 text-center text-black">
+      <section className="bg-gradient-to-b from-primary via-base-100 to-transparent py-8 px-6 text-center text-black md:py-16 lg:py-24">
         <PrismicRichText
           field={slice.primary.headingtext}
           components={heroTemplates}
