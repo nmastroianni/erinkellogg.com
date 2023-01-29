@@ -3,7 +3,7 @@ import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 import PrismicButtonLink from '@/components/PrismicButtonLink'
 import Heading from '@/components/Heading'
-
+import Image from 'next/image'
 /**
  * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeroSlice>} HeroProps
@@ -47,13 +47,21 @@ const Hero = ({ index, slice }) => {
     return (
       <section>
         <div
-          className="relative overflow-hidden bg-cover bg-no-repeat"
-          style={{
-            backgroundPosition: '50%',
-            backgroundImage: `url(${slice.primary.backgroundimage.url})`,
-            height: '500px',
-          }}
-        ></div>
+          className="relative h-[500px] overflow-hidden bg-cover bg-no-repeat"
+          // style={{
+          //   backgroundPosition: '50%',
+          //   backgroundImage: `url(${slice.primary.backgroundimage.url})`,
+          //   height: '500px',
+          // }}
+        >
+          <Image
+            src={slice.primary.backgroundimage.url}
+            alt={slice.primary.backgroundimage.alt}
+            fill
+            className="object-cover"
+            priority={index === 0 ? true : false}
+          />
+        </div>
         <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
           <div className="text-center text-black">
             <div className="-mt-[180px] block rounded-lg bg-white bg-opacity-70 px-6 py-12 backdrop-blur-md md:py-16 md:px-12">

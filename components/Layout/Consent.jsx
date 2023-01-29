@@ -41,7 +41,7 @@ const Consent = () => {
   return (
     <div
       id="consent-banner"
-      className={`fixed bottom-0 grid w-full bg-primary bg-opacity-95 p-3 opacity-0 transition duration-500 ease-in md:grid-cols-5 ${
+      className={`fixed bottom-0 grid w-full bg-primary bg-opacity-95 p-3 opacity-0 md:grid-cols-5 ${
         consent ? 'hidden' : ''
       }`}
     >
