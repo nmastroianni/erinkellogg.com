@@ -5,24 +5,24 @@
       {
         "type": "heading2",
         "content": {
-          "text": "Break"
+          "text": "Believed"
         }
       }
     ]
   },
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "sides"
+    "value": "took"
   },
   "hidepagetitle": {
     "__TYPE__": "BooleanContent",
-    "value": false
+    "value": true
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "content$98fa899a-5875-4020-87cb-de1c85560e6c",
+        "key": "content$f07294fb-4fb3-4f35-9250-1976a67ad13f",
         "name": "content",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -34,7 +34,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Minim incididunt excepteur eiusmod culpa eiusmod occaecat pariatur proident incididunt commodo Lorem in anim. Esse dolor labore deserunt aliqua ad. Veniam tempor dolore sunt sit dolor."
+                    "text": "Sit in veniam anim deserunt elit aliquip do. Lorem id ex ex ipsum et duis aliquip excepteur exercitation consequat nostrud non."
                   }
                 }
               ]
@@ -49,7 +49,7 @@
         }
       },
       {
-        "key": "divider$b2a425d1-0e80-4ea5-a99c-3ebd3a928e97",
+        "key": "divider$e5fa4aa2-662e-41dc-b0ec-d7a1a9778b53",
         "name": "divider",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -64,7 +64,7 @@
         }
       },
       {
-        "key": "hero$67b4db3f-62e0-4522-85cb-02f14192384a",
+        "key": "hero$1ef3be69-7a2a-4112-9956-79fe5d89dd84",
         "name": "hero",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -76,7 +76,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Spirit"
+                    "text": "Brick"
                   }
                 }
               ]
@@ -90,7 +90,7 @@
                   "buttontext",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "ago",
+                    "value": "write",
                     "type": "Text"
                   }
                 ],
@@ -108,8 +108,74 @@
                   "buttoncolor",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "Info",
+                    "value": "Neutral",
                     "type": "Select"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "newsletter_signup$eaca8280-10ef-40da-8c51-20d4b9873835",
+        "name": "newsletter_signup",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Garden"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Pariatur sit ad aliqua irure dolor."
+                  }
+                }
+              ]
+            },
+            "formlocation": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "buttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "we",
+              "type": "Text"
+            },
+            "buttoncolor": {
+              "__TYPE__": "FieldContent",
+              "value": "Info",
+              "type": "Select"
+            },
+            "placeholdertext": {
+              "__TYPE__": "FieldContent",
+              "value": "open",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "mailerlitegroupid",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "cup",
+                    "type": "Text"
                   }
                 ]
               ]
@@ -121,20 +187,20 @@
   },
   "metadescription": {
     "__TYPE__": "FieldContent",
-    "value": "ready",
+    "value": "youth",
     "type": "Text"
   },
   "metaimage": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-      "width": 6000,
-      "height": 4000
+      "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+      "width": 5000,
+      "height": 4613
     },
-    "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-    "width": 6000,
-    "height": 4000,
+    "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+    "width": 5000,
+    "height": 4613,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -147,7 +213,7 @@
   },
   "canonicalurl": {
     "__TYPE__": "FieldContent",
-    "value": "quite",
+    "value": "plant",
     "type": "Text"
   }
 }

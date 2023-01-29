@@ -2,7 +2,13 @@
   {
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
-    "primary": {},
+    "primary": {
+      "uid": {
+        "__TYPE__": "FieldContent",
+        "value": "2",
+        "type": "Number"
+      }
+    },
     "items": [
       {
         "__TYPE__": "GroupItemContent",

@@ -4,12 +4,14 @@ import Content from './Content';
 import Divider from './Divider';
 import Hero from './Hero';
 import MenuItem from './MenuItem';
+import NewsletterSignup from './NewsletterSignup';
 
 export {
 	Content,
 	Divider,
 	Hero,
 	MenuItem,
+	NewsletterSignup,
 };
 
 export const components = {
@@ -17,4 +19,5 @@ export const components = {
 	divider: Divider,
 	hero: Hero,
 	menu_item: MenuItem,
+	newsletter_signup: NewsletterSignup,
 };

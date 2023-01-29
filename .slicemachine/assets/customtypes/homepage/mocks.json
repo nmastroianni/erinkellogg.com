@@ -5,7 +5,7 @@
       {
         "type": "heading2",
         "content": {
-          "text": "Section"
+          "text": "Entirely"
         }
       }
     ]
@@ -14,7 +14,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "content$8827864f-c9ef-4ee0-a1a6-87b864bcc407",
+        "key": "content$041569db-b5b4-4220-bb42-e3981297f3a7",
         "name": "content",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -26,7 +26,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Cillum adipisicing officia id irure. Non sit fugiat ad consequat dolore mollit irure nisi sint amet aliqua."
+                    "text": "Est dolore veniam est qui nulla in velit. Pariatur ipsum aute consectetur reprehenderit Lorem."
                   }
                 }
               ]
@@ -41,7 +41,7 @@
         }
       },
       {
-        "key": "hero$a232dbda-718a-4376-9354-b5a85dad7af7",
+        "key": "hero$910d2654-b841-48a7-8177-7ffd9cc8557a",
         "name": "hero",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -53,7 +53,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Function"
+                    "text": "National"
                   }
                 }
               ]
@@ -67,7 +67,7 @@
                   "buttontext",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "smooth",
+                    "value": "care",
                     "type": "Text"
                   }
                 ],
@@ -95,7 +95,7 @@
         }
       },
       {
-        "key": "divider$555a9eec-3f62-41c8-b1d7-bc0fa355134d",
+        "key": "divider$6027429f-c21d-46f1-96e9-729ec081fffd",
         "name": "divider",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -108,24 +108,90 @@
             }
           ]
         }
+      },
+      {
+        "key": "newsletter_signup$96c88f6f-2a31-415c-8686-738eb5695271",
+        "name": "newsletter_signup",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Breathe"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Minim enim mollit dolor duis ex id aute ut ut sunt enim dolor aute consectetur in. Irure consectetur incididunt excepteur eu cillum deserunt proident Lorem."
+                  }
+                }
+              ]
+            },
+            "formlocation": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "buttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "tall",
+              "type": "Text"
+            },
+            "buttoncolor": {
+              "__TYPE__": "FieldContent",
+              "value": "Accent",
+              "type": "Select"
+            },
+            "placeholdertext": {
+              "__TYPE__": "FieldContent",
+              "value": "thousand",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "mailerlitegroupid",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "clearly",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
       }
     ]
   },
   "metadescription": {
     "__TYPE__": "FieldContent",
-    "value": "chest",
+    "value": "whom",
     "type": "Text"
   },
   "metaimage": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-      "width": 4000,
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+      "width": 6000,
       "height": 4000
     },
-    "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-    "width": 4000,
+    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+    "width": 6000,
     "height": 4000,
     "edit": {
       "zoom": 1,

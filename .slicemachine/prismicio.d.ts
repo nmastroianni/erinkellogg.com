@@ -107,7 +107,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = ContentSlice | HeroSlice | DividerSlice;
+type HomepageDocumentDataSlicesSlice = ContentSlice | HeroSlice | DividerSlice | NewsletterSignupSlice;
 /**
  * Homepage document from Prismic
  *
@@ -254,7 +254,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ContentSlice | DividerSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = ContentSlice | DividerSlice | HeroSlice | NewsletterSignupSlice;
 /**
  * Page document from Prismic
  *
@@ -363,6 +363,22 @@ type ContentSliceVariation = ContentSliceDefault;
  */
 export type ContentSlice = prismicT.SharedSlice<"content", ContentSliceVariation>;
 /**
+ * Primary content in Divider → Primary
+ *
+ */
+interface DividerSliceDefaultPrimary {
+    /**
+     * uid field in *Divider → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: divider.primary.uid
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    uid: prismicT.NumberField;
+}
+/**
  * Default variation for Divider Slice
  *
  * - **API ID**: `default`
@@ -370,7 +386,7 @@ export type ContentSlice = prismicT.SharedSlice<"content", ContentSliceVariation
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type DividerSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+export type DividerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<DividerSliceDefaultPrimary>, never>;
 /**
  * Slice variation for *Divider*
  *
@@ -672,11 +688,117 @@ type MenuItemSliceVariation = MenuItemSliceDefault;
  *
  */
 export type MenuItemSlice = prismicT.SharedSlice<"menu_item", MenuItemSliceVariation>;
+/**
+ * Primary content in NewsletterSignup → Primary
+ *
+ */
+interface NewsletterSignupSliceDefaultPrimary {
+    /**
+     * Title field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Heading/Title of Form
+     * - **API ID Path**: newsletter_signup.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: newsletter_signup.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * FormLocation field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: newsletter_signup.primary.formlocation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    formlocation: prismicT.BooleanField;
+    /**
+     * ButtonText field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: newsletter_signup.primary.buttontext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttontext: prismicT.KeyTextField;
+    /**
+     * ButtonColor field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: newsletter_signup.primary.buttoncolor
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    buttoncolor: prismicT.SelectField<"Primary" | "Secondary" | "Accent" | "Neutral" | "Info" | "Success" | "Warning" | "Error">;
+    /**
+     * PlaceholderText field in *NewsletterSignup → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: newsletter_signup.primary.placeholdertext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    placeholdertext: prismicT.KeyTextField;
+}
+/**
+ * Item in NewsletterSignup → Items
+ *
+ */
+export interface NewsletterSignupSliceDefaultItem {
+    /**
+     * MailerLiteGroupId field in *NewsletterSignup → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: newsletter_signup.items[].mailerlitegroupid
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mailerlitegroupid: prismicT.KeyTextField;
+}
+/**
+ * Default variation for NewsletterSignup Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NewsletterSignup`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsletterSignupSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NewsletterSignupSliceDefaultPrimary>, Simplify<NewsletterSignupSliceDefaultItem>>;
+/**
+ * Slice variation for *NewsletterSignup*
+ *
+ */
+type NewsletterSignupSliceVariation = NewsletterSignupSliceDefault;
+/**
+ * NewsletterSignup Shared Slice
+ *
+ * - **API ID**: `newsletter_signup`
+ * - **Description**: `NewsletterSignup`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsletterSignupSlice = prismicT.SharedSlice<"newsletter_signup", NewsletterSignupSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataSlicesSlice, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SitemetadataDocumentData, SitemetadataDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice, MenuItemSliceDefaultPrimary, MenuItemSliceDefault, MenuItemSliceVariation, MenuItemSlice };
+        export type { FooterDocumentData, FooterDocumentDataLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, MainmenuDocumentData, MainmenuDocumentDataSlicesSlice, MainmenuDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SitemetadataDocumentData, SitemetadataDocument, AllDocumentTypes, ContentSliceDefaultPrimary, ContentSliceDefault, ContentSliceVariation, ContentSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, HeroSliceDefaultPrimary, HeroSliceDefaultItem, HeroSliceDefault, HeroSliceImageWithCardPrimary, HeroSliceImageWithCardItem, HeroSliceImageWithCard, HeroSliceImageHighlightCardOverlayPrimary, HeroSliceImageHighlightCardOverlayItem, HeroSliceImageHighlightCardOverlay, HeroSliceVariation, HeroSlice, MenuItemSliceDefaultPrimary, MenuItemSliceDefault, MenuItemSliceVariation, MenuItemSlice, NewsletterSignupSliceDefaultPrimary, NewsletterSignupSliceDefaultItem, NewsletterSignupSliceDefault, NewsletterSignupSliceVariation, NewsletterSignupSlice };
     }
 }

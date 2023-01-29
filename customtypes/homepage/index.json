@@ -27,6 +27,9 @@
             },
             "divider": {
               "type": "SharedSlice"
+            },
+            "newsletter_signup": {
+              "type": "SharedSlice"
             }
           }
         }

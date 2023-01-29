@@ -5,6 +5,11 @@
 .headroom-wrapper > div {
   @apply bg-sky-200;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 h2:has(.center-align),
 h3:has(.center-align),
 h4:has(.center-align),

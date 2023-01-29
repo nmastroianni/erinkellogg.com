@@ -1,0 +1,66 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Heading 2 Newsletter Sign-up",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Magna in quis amet duis commodo pariatur aliquip id anim adipisicing consectetur quis laborum amet proident. Nulla aute velit adipisicing anim sunt pariatur ex id labore amet ad."
+            }
+          }
+        ]
+      },
+      "formlocation": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "buttoncolor": {
+        "__TYPE__": "FieldContent",
+        "type": "Select",
+        "value": "Warning"
+      },
+      "placeholdertext": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Enter your best email here"
+      },
+      "buttontext": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Sign Up Now"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "mailerlitegroupid",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pound",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
