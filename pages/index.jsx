@@ -57,8 +57,13 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
             />
           ))}
 
-        <meta property="twitter:card" content="summary" />
-
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:description"
+          content={
+            page.data.metadescription || siteMetadata.data.sitemetadescription
+          }
+        />
         {page.data.metaimage.url ||
           (siteMetadata.data.sitemetaimage.url && (
             <meta
