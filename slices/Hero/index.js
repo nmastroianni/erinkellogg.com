@@ -64,7 +64,7 @@ const Hero = ({ index, slice }) => {
         </div>
         <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
           <div className="text-center text-black">
-            <div className="-mt-[180px] block rounded-lg bg-white bg-opacity-70 px-6 py-12 backdrop-blur-md md:py-16 md:px-12">
+            <div className="-mt-[440px] block rounded-lg bg-white bg-opacity-70 px-6 py-12 backdrop-blur-md md:-mt-[180px] md:py-16 md:px-12">
               <PrismicRichText
                 field={slice.primary.headingtext}
                 components={heroTemplates}
