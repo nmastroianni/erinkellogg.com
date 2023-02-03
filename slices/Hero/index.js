@@ -51,10 +51,11 @@ const Hero = ({ index, slice }) => {
             src={slice.primary.backgroundimage.url}
             alt={slice.primary.backgroundimage.alt}
             fill
+            sizes="100vw"
             className="object-cover"
             priority={index === 0 ? true : false}
           />
-          <div className="absolute inset-0 h-full backdrop-blur-sm" />
+          {/* <div className="absolute inset-0 h-full backdrop-blur-sm" /> */}
         </div>
         <div className="mx-auto max-w-[1280px] px-6 md:px-12 xl:px-32">
           <div className="text-center text-black">
