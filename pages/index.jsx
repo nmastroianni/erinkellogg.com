@@ -75,11 +75,7 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
           ))}
       </Head>
       <div className="grid grid-cols-1 gap-y-4 md:gap-y-0">
-        <SliceZone
-          slices={page.data.slices}
-          components={components}
-          myProp="foo"
-        />
+        <SliceZone slices={page.data.slices} components={components} />
       </div>
     </Layout>
   )

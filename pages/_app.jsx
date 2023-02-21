@@ -64,11 +64,15 @@ export default function App({ Component, pageProps }) {
   const consent = getCookie(`localConsent`)
   return (
     <PrismicProvider
-      internalLinkComponent={(props) => <Link {...props} />}
+      internalLinkComponent={props => <Link {...props} />}
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
         <Head>
+          <meta
+            name="facebook-domain-verification"
+            content="0p60grovymmxkb3j0cp3o4h2rsz750"
+          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
