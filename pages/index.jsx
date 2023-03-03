@@ -16,7 +16,7 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
         <link
           rel="canonical"
           href={
-            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com/`
+            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com`
           }
         />
         {page.data.metadescription ? (
@@ -42,7 +42,7 @@ export default function Home({ footer, page, navigation, siteMetadata }) {
         <meta
           property="og:url"
           content={
-            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com/`
+            siteMetadata.data.sitecanonicalurl || `https://www.erinkellogg.com`
           }
         />
         <meta property="og:type" content="website" />
