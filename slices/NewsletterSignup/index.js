@@ -65,18 +65,18 @@ const NewsletterSignup = ({ slice }) => {
     const formKeys = Object.keys(formData)
     let email
     let firstName
-    formKeys.forEach((key) => {
+    formKeys.forEach(key => {
       key.indexOf('email') !== -1
         ? (email = formData[key])
         : (firstName = formData[key])
     })
     try {
-      const groupIds = slice.items.map((item) => item.mailerlitegroupid)
+      const groupIds = slice.items.map(item => item.mailerlitegroupid)
       await axios({
         url: '/api/newsletter',
         method: 'POST',
         data: { email, firstName, groupIds, token },
-      }).then((res) => {
+      }).then(res => {
         if (res.status === 200) {
           reset()
           setSuccess(true)
@@ -101,13 +101,13 @@ const NewsletterSignup = ({ slice }) => {
     }
   }
 
-  const addSubscriber = async (formData) => {
+  const addSubscriber = async formData => {
     window.grecaptcha.ready(() => {
       window.grecaptcha
         .execute('6LeHxDYkAAAAAPUbSr8asoDuwicuqAa2t8i3s1Md', {
           action: 'submit',
         })
-        .then((token) => {
+        .then(token => {
           submitData(formData, token)
         })
     })
@@ -244,9 +244,11 @@ const NewsletterSignup = ({ slice }) => {
               className={`max-w-s input-bordered ${inputColor} input w-full`}
             />
           </label>
-
-          {errors.email && (
-            <p className="text-error"> &uarr; {errors.email.message}</p>
+          {errors[`email_${id}`] && (
+            <p className="text-error">
+              {' '}
+              &uarr; {errors[`email_${id}`].message}
+            </p>
           )}
           <div>
             <input

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Roboto_Serif } from '@next/font/google'
+import { Roboto_Serif } from "next/font/google"
 const serif = Roboto_Serif({ subsets: ['latin'] })
 const Heading = ({ as: Comp = 'h2', size = null, children, className }) => {
   return (

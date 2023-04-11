@@ -1,5 +1,5 @@
 /* Importing the Roboto_Serif and Roboto_Flex from the google font file. */
-import { Roboto_Serif, Roboto_Flex } from '@next/font/google'
+import { Roboto_Serif, Roboto_Flex } from "next/font/google"
 import Footer from './Footer'
 const roboto_serif = Roboto_Serif({ subsets: ['latin'] })
 const roboto_flex = Roboto_Flex({ subsets: ['latin'] })
